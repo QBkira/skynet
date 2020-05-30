@@ -110,9 +110,9 @@ function gateserver.start(handler)
 		end
 	end
 
-	function MSG.error(fd, msg)
+	function MSG.error(fd, msg)		
 		if fd == socket then
-			socketdriver.close(fd)
+			-- socketdriver.close(fd)
 			skynet.error("gateserver close listen socket, accpet error:",msg)
 		else
 			if handler.error then
